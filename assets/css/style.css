@@ -1,55 +1,137 @@
-@import url("./fonts.css");
-
 /* GENERAL */
+
+body {
+    font-family: 'TS-Reg';
+    line-height: 1;
+}
 
 .container {
     width: 1135px;
     margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
     border: 1px solid red;
     height: 100%;
-    font-family: 'TS-Reg';
 }
 
 /* HEADER */
 
 header {
     height: 60px;
-    margin: 10px;
 }
 
-.container img {
+header .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+header img {
     width: 190px;
 }
 
-ul {
+header nav {
     display: flex;
-    border: 1px solid blue;
-    width: 554px;
+    align-items: center;
     gap: 10px;
 }
 
-li {
-    flex: 1;
-    text-align: center;
-    border: 1px solid black;
-    margin-top: 20px;
+header a {
+    text-decoration: none;
+    color: black;
 }
 
-/* Main */
+header button {
+    border: none;
+    background-color: black;
+    color: white;
+    /* Prendra la valeur du parent pour ces propriÃ©tÃ©s */
+    font-size: inherit;
+    font-family: inherit;
+}
 
-span {
-    color: #FF5D5D;
+header :is(a, button) {
+    padding: 7px 10px;
+    border-radius: 20px;
 }
 
 h1 {
     font-size: 50px;
     font-weight: bold;
     color: black;
+    font-family: 'TS-Med';
+    margin: 20px 0 10px 0;
 }
 
-p {
+h1 span {
+    color: #FF5D5D;
+}
+
+h1 + p {
     font-size: 14px;
     color: #333333;
+}
+
+/* Main */
+
+main {
+    width: 1135px;
+    margin: 0 auto;
+    border: 1px solid pink;
+    height: 100%;
+}
+
+.menu {
+    margin: 20px 0;
+    display: flex;
+    gap: 10px;
+}
+
+.menu > div {
+    border: 1px solid black;
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    width: calc(100% - 50px);
+}
+
+.img-bloc {
+    height: 430px;
+    gap: 2px;
+    display: flex;
+}
+
+.img-bloc > div:first-child {
+    flex: 1;
+    height: 100%;
+}
+
+.img-bloc > div:last-child {
+    width: 480px;
+}
+
+.img-bloc img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.img-bloc > div:last-child > div {
+    height: calc((100% - 2px) / 2);
+}
+
+/* GALLERY */
+
+.gallery {
+    display: flex;
+}
+
+.simple-img img{
+    height: 427px;
+    width: 652px;
+    object-fit: cover;
+}
+
+.dbl-img img{
+    height: 211px;
+    width: 479px;
+    object-fit: cover;
 }
